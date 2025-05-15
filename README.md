@@ -82,7 +82,7 @@ Once you finish the assignment, submit a URL link to your repository or your pul
 - **Run and Validate:**
   - Use the Postman Collection Runner to execute your requests.
   - Test both the positive (discount applied) and negative (no discount) scenarios by toggling the property `feature.earlybird.enabled` and by varying the query parameters.
-
+![Collection Postman.JPG](Collection%20Postman.JPG)
 <br />
 
 ### 3. Documentation in README.md
@@ -90,11 +90,39 @@ Once you finish the assignment, submit a URL link to your repository or your pul
 Update your repository’s `README.md` to include:
 
 - A brief explanation of your design choices for the **EarlyBirdDiscountService**.
+
+  He hecho un sistema que da diferentes descuentos según cuántos días antes reserves, siendo un 15%
+  si reservas con más de 30 días hasta no tener descuento si reservas en el plazo de menos de 7 días.
+  El código comprueba la diferencia entre fecha de la reserva y el evento en cuestión para así ejecutar
+  el descuento correspondiente.
+
 - Answers to:
+
+
   - Why did you choose constructor-based DI for this lab?
+
+    He usado inyección por constructor porque creo que es mas fácil pasar todo
+    lo que necesita mi servicio desde el principio.
+  
+
   - What advantages do Postman pre-request and post-response scripts offer for automated testing?
+    
+    Los scripts de pre-solicitud me han servido para preparar los datos de forma automática antes de cada prueba.
+    Y los post-respuesta me han ahorrado el tiempo ya que al verificar de forma automática si se aplicaban los descuentos
+    correctamente , me ha evitado revisar todo de forma manual.
+  
+
   - How does your application behave when the early bird feature is disabled?
+
+    La aplicación sigue funcionando normal, lo único que varia es que no da descuento a nadie, sin importar
+    en que momento reserven, Asi evitamos que la app se rompa cuando queremos quitar las promociones de forma temporal.
+  
+
   - What are some challenges you faced when integrating advanced DI with API testing?
+
+    A la hora de asegurarme que los componentes estuvieran bien conectados entre sí, ya que si falla algo,
+    es complicado saber donde puede estar el problema. El tema de las fechas diferentes para cada tipo de prueba tambien
+    tiene su dificultad.
 
 <br />
 
