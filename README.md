@@ -82,7 +82,7 @@ Once you finish the assignment, submit a URL link to your repository or your pul
 - **Run and Validate:**
   - Use the Postman Collection Runner to execute your requests.
   - Test both the positive (discount applied) and negative (no discount) scenarios by toggling the property `feature.earlybird.enabled` and by varying the query parameters.
-![Collection Postman.JPG](Collection%20Postman.JPG)
+  ![Collection Postman.PNG](Collection%20Postman.PNG)
 <br />
 
 ### 3. Documentation in README.md
